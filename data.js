@@ -202,12 +202,16 @@ const PLATFORM_URL = 'https://plasticology.surgerymastersacademy.com';
 
 function buildOrderMessage() {
   return (
-    'السلام عليكم يا دكتور بيشوى 👋\n\nبتواصل من خلال موقع Plasticology Books\n\n' +
-    'عايز أطلب:\n📚 سلسلة Plasticology الكاملة — 3 أجزاء (الطبعة الثانية 2026)\n\n' +
-    '• الجزء الأول: Fundamentals, Burns, Skin, Breast\n' +
-    '• الجزء الثاني: Trunk, Lower Limb, Genitourinary, Hand & Upper Extremity\n' +
-    '• الجزء الثالث: Head & Neck, Aesthetic Surgery\n\n' +
-    'برجاء تأكيد التوافر وطريقة الدفع. شكراً!'
+    'السلام عليكم Plasticology Book Store 👋\n\n' +
+    'عايز أطلب سلسلة Plasticology الكاملة\n' +
+    'الطبعة الثانية 2026 — 3 أجزاء\n\n' +
+    '📚 الجزء الأول: Fundamentals · Burns · Skin · Breast\n' +
+    '📚 الجزء الثاني: Trunk · Lower Limb · Genitourinary · Hand\n' +
+    '📚 الجزء الثالث: Head & Neck · Aesthetic Surgery\n\n' +
+    '💰 السعر: 2,500 جنيه\n' +
+    '🏠 التوصيل لحد بابك من دار الكتاب الجامعي\n' +
+    '    (رسوم الشحن تُضاف حسب المنطقة)\n\n' +
+    'برجاء تأكيد التوافر وطرق التأكيد والدفع. شكراً!'
   );
 }
 

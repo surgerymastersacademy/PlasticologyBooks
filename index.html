@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plasticology — 2nd Edition 2026 | Surgery Masters Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { cairo: ['Cairo', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-cairo text-slate-800">
+
+  <!-- ── Sticky anchor nav ──────────────────────────────────────── -->
+  <nav id="anchor-nav">
+    <div class="inner">
+      <div class="nav-links">
+        <button onclick="scrollToSection('volumes')">Books</button>
+        <button onclick="scrollToSection('platform')">Platform</button>
+        <button onclick="scrollToSection('curriculum')">Curriculum</button>
+        <button onclick="scrollToSection('reviews')">Reviews</button>
+        <button onclick="scrollToSection('faq')">FAQ</button>
+        <button onclick="scrollToSection('author')">Author</button>
+        <button onclick="scrollToSection('community')">Community</button>
+      </div>
+      <div class="nav-ctas">
+        <a id="nav-order-btn" href="#" target="_blank" rel="noreferrer" class="btn-order hidden sm:inline-flex">
+          <!-- chat icon -->
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>
+          Order Books
+        </a>
+        <a href="https://plasticology.surgerymastersacademy.com" target="_blank" rel="noreferrer" class="btn-platform">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Platform
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Hero ──────────────────────────────────────────────────── -->
+  <section id="hero">
+    <!-- glow blobs -->
+    <div class="hero-blob" style="width:380px;height:380px;background:#7c3aed;top:0;left:25%;"></div>
+    <div class="hero-blob" style="width:380px;height:380px;background:#2563eb;bottom:0;right:25%;"></div>
+    <div class="hero-blob" style="width:260px;height:260px;background:#db2777;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.12;"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-4 md:px-6 py-10 md:py-20">
+      <div class="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-12">
+
+        <!-- Text -->
+        <div class="flex-1 text-center lg:text-left w-full">
+          <!-- Social proof -->
+          <div class="flex items-center justify-center lg:justify-start gap-2 mb-4">
+            <div class="flex" style="margin-right:2px">
+              <div style="width:24px;height:24px;border-radius:50%;background:#7c3aed;border:2px solid #1e293b;margin-right:-4px"></div>
+              <div style="width:24px;height:24px;border-radius:50%;background:#0891b2;border:2px solid #1e293b;margin-right:-4px"></div>
+              <div style="width:24px;height:24px;border-radius:50%;background:#db2777;border:2px solid #1e293b;margin-right:-4px"></div>
+              <div style="width:24px;height:24px;border-radius:50%;background:#f59e0b;border:2px solid #1e293b;margin-right:-4px"></div>
+              <div style="width:24px;height:24px;border-radius:50%;background:#10b981;border:2px solid #1e293b"></div>
+            </div>
+            <p class="text-white/70 text-xs font-bold">
+              موثوق من <span class="text-white font-black">+1,000</span> جراح تجميل في مصر والعالم العربي
+            </p>
+          </div>
+
+          <div class="inline-flex items-center gap-2 border border-white/20 text-white/80 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5" style="background:rgba(255,255,255,.1)">
+            📦 2026 Second Edition · Complete Series
+          </div>
+
+          <h1 class="text-3xl md:text-5xl font-black text-white leading-tight mb-4">
+            The Complete<br>
+            <span class="text-transparent bg-clip-text" style="background-image:linear-gradient(to right,#c084fc,#f472b6,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent">
+              Plasticology Series
+            </span>
+          </h1>
+
+          <p class="text-slate-400 text-base md:text-lg mb-4 leading-relaxed max-w-lg">
+            3 volumes. 1,200+ pages. The definitive Arabic plastic surgery companion — completely rebuilt from the ground up.
+          </p>
+
+          <!-- 2nd edition callout -->
+          <div class="relative overflow-hidden rounded-xl px-4 py-4 mb-6 text-right max-w-lg mx-auto lg:mx-0" dir="rtl"
+               style="border:1px solid rgba(251,191,36,.4);background:rgba(251,191,36,.1)">
+            <div class="absolute top-0 left-0 text-slate-900 text-[9px] font-black uppercase tracking-widest px-2 py-0.5 rounded-br-lg" dir="ltr" style="background:#f59e0b">NEW</div>
+            <p class="text-amber-300 text-sm font-bold leading-relaxed mb-2">الطبعة الثانية مش مجرد صفحات جديدة...</p>
+            <p class="text-xs leading-relaxed" style="color:rgba(253,230,138,.8)">
+              دي مراجعة شاملة، وتحديث للمحتوى، وإضافة عشرات الموضوعات الحديثة اللي بقت جزء أساسي من حاضر ومستقبل جراحة التجميل — مع إضافة شرح واضح بلغتنا المصرية للمواضيع المعقدة. طورنا ترتيب الفصول، والرسومات، والجداول، وربطنا المحتوى أكثر بالممارسة اليومية والامتحانات.
+            </p>
+            <p class="text-[10px] mt-2 font-bold" dir="ltr" style="color:rgba(251,191,36,.6)">Second Edition · Rebuilt from the ground up · 2026</p>
+          </div>
+
+          <div class="flex items-center gap-2 text-amber-400 text-sm font-bold mb-8 justify-center lg:justify-start">
+            🔑 Each copy includes a serial code unlocking exclusive platform features
+          </div>
+
+          <!-- Stats -->
+          <div class="flex flex-wrap gap-6 mb-8 justify-center lg:justify-start">
+            <div class="text-center lg:text-left"><p class="text-xl font-black text-white">3</p><p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Volumes</p></div>
+            <div class="text-center lg:text-left"><p class="text-xl font-black text-white">1,200+</p><p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Pages</p></div>
+            <div class="text-center lg:text-left"><p class="text-xl font-black text-white">56</p><p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Chapters</p></div>
+            <div class="text-center lg:text-left"><p class="text-xl font-black text-white">192+</p><p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Lecture Hrs</p></div>
+            <div class="text-center lg:text-left"><p class="text-xl font-black text-white">11,000+</p><p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">MCQs on Platform</p></div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+            <a id="hero-order-btn" href="#" target="_blank" rel="noreferrer"
+               class="flex items-center justify-center gap-2 font-black py-3.5 px-7 rounded-2xl transition text-sm text-white"
+               style="background:#22c55e;box-shadow:0 8px 20px rgba(34,197,94,.25)">
+              💬 Order on WhatsApp
+            </a>
+            <a href="https://plasticology.surgerymastersacademy.com" target="_blank" rel="noreferrer"
+               class="flex items-center justify-center gap-2 border border-white/20 text-white font-bold py-3.5 px-7 rounded-2xl transition text-sm"
+               style="background:rgba(255,255,255,.1)">
+              Open Platform ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- 3 covers fanned -->
+        <div id="hero-covers" class="shrink-0 relative" style="height:320px;width:420px"></div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Volumes ────────────────────────────────────────────────── -->
+  <section id="volumes" class="py-14">
+    <div class="max-w-6xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-10">
+        <p class="text-xs font-black uppercase tracking-widest text-blue-600 mb-2">Inside the Series</p>
+        <h2 class="text-2xl md:text-3xl font-black text-slate-900 mb-3">What's in Each Volume</h2>
+        <p class="text-slate-500 max-w-xl mx-auto text-sm leading-relaxed">
+          Three complete volumes covering the entire plastic surgery curriculum — designed to complement the digital platform.
+        </p>
+      </div>
+      <div id="volumes-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+
+      <!-- Series intro PDF -->
+      <div class="mt-6 flex flex-col sm:flex-row items-center gap-4 rounded-2xl px-6 py-5 shadow-lg" style="background:linear-gradient(to right,#1e293b,#0f172a)">
+        <div class="flex items-center gap-3 flex-1 min-w-0">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center shrink-0" style="background:rgba(255,255,255,.1)">
+            📖
+          </div>
+          <div>
+            <p class="font-black text-white text-sm">2nd Edition — Series Introduction</p>
+            <p class="text-slate-400 text-xs mt-0.5">Read the full preface — the philosophy, what changed, and what to expect.</p>
+          </div>
+        </div>
+        <a id="series-intro-link" href="#" target="_blank" rel="noreferrer"
+           class="shrink-0 flex items-center gap-2 bg-white text-slate-900 font-black text-xs px-5 py-2.5 rounded-xl hover:bg-slate-100 transition">
+          ↗ Read Introduction
+        </a>
+      </div>
+
+      <!-- Serial code callout -->
+      <div class="serial-callout mt-6 p-5 md:p-6">
+        <div class="flex flex-col md:flex-row items-start md:items-center gap-5">
+          <div class="shrink-0 flex flex-col items-center gap-1">
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center shadow-md text-2xl" style="background:#f59e0b">🎁</div>
+            <span class="text-xs font-black uppercase tracking-wider" style="color:#92400e">Volume 1</span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <p class="font-black text-amber-900 text-base mb-1">Secret Code Inside Volume 1 — Don't Miss It!</p>
+            <p class="text-amber-800 text-sm leading-relaxed mb-3">
+              Look at the back cover of Volume 1 — there's a unique serial code sticker. Enter it on the login page or in your Profile after signing up to unlock your free gift and bonus platform access.
+              <span class="font-bold text-amber-600"> Some codes include surprise extras! 🎉</span>
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="flex items-center gap-1.5 border border-amber-200 rounded-lg px-3 py-1.5 text-xs font-bold text-amber-800 bg-white">📍 Inside the back cover of Volume 1</span>
+              <span class="flex items-center gap-1.5 border border-green-200 rounded-lg px-3 py-1.5 text-xs font-bold text-green-700 bg-green-50">🎁 Exclusive platform features &amp; access</span>
+            </div>
+          </div>
+          <div class="shrink-0 bg-white border border-amber-200 rounded-xl p-4 text-xs text-slate-600 space-y-2 w-full md:w-52">
+            <p class="font-black text-slate-800 text-[11px] uppercase tracking-wider mb-1">How to redeem</p>
+            <div class="flex items-start gap-2"><span class="w-4 h-4 rounded-full bg-amber-400 text-white font-black text-[9px] flex items-center justify-center shrink-0 mt-0.5">1</span><span>Open the back cover of Vol. 1</span></div>
+            <div class="flex items-start gap-2"><span class="w-4 h-4 rounded-full bg-amber-400 text-white font-black text-[9px] flex items-center justify-center shrink-0 mt-0.5">2</span><span>Find the code sticker</span></div>
+            <div class="flex items-start gap-2"><span class="w-4 h-4 rounded-full bg-amber-400 text-white font-black text-[9px] flex items-center justify-center shrink-0 mt-0.5">3</span><span>Enter it on Login or Profile</span></div>
+            <div class="flex items-start gap-2"><span class="w-4 h-4 rounded-full bg-amber-400 text-white font-black text-[9px] flex items-center justify-center shrink-0 mt-0.5">4</span><span>Your gift is activated instantly</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Platform Features ──────────────────────────────────────── -->
+  <div style="background:#0f172a" class="py-14">
+    <section id="platform" class="max-w-6xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-10">
+        <p class="text-xs font-black uppercase tracking-widest text-blue-400 mb-2">The Digital Platform</p>
+        <h2 class="text-2xl md:text-3xl font-black text-white mb-3">Everything in One Place</h2>
+        <p class="text-sm leading-relaxed max-w-xl mx-auto" style="color:#94a3b8">The books and the platform work together. Study from the book, then practice on the platform — one ecosystem.</p>
+      </div>
+      <div id="features-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10"></div>
+      <div class="rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1)">
+        <div>
+          <p class="text-white font-black text-xl mb-1">Try the platform free for 3 days</p>
+          <p class="text-sm" style="color:#94a3b8">No payment required. Full access to all features the moment you register.</p>
+        </div>
+        <a href="https://plasticology.surgerymastersacademy.com" target="_blank" rel="noreferrer"
+           class="flex items-center gap-2 font-black py-3 px-6 rounded-xl transition text-sm text-white shrink-0"
+           style="background:#2563eb;box-shadow:0 4px 14px rgba(37,99,235,.4)">
+          Open Platform ↗
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- ── Curriculum ─────────────────────────────────────────────── -->
+  <section id="curriculum" class="py-14">
+    <div class="max-w-6xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-10">
+        <p class="text-xs font-black uppercase tracking-widest text-blue-600 mb-2">Complete Curriculum</p>
+        <h2 class="text-2xl md:text-3xl font-black text-slate-900 mb-3">192+ Hours of Structured Content</h2>
+        <p class="text-slate-500 max-w-xl mx-auto text-sm leading-relaxed">
+          Every major topic in plastic surgery — systematically organised and cross-referenced between the books and the digital platform.
+        </p>
+      </div>
+      <div id="curriculum-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6"></div>
+      <div class="flex flex-wrap gap-4 justify-center text-center">
+        <div class="bg-white border border-slate-200 rounded-2xl px-6 py-4 shadow-sm"><p class="text-2xl font-black text-blue-600">9+</p><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Major Modules</p></div>
+        <div class="bg-white border border-slate-200 rounded-2xl px-6 py-4 shadow-sm"><p class="text-2xl font-black text-blue-600">174+</p><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Lecture Hours</p></div>
+        <div class="bg-white border border-slate-200 rounded-2xl px-6 py-4 shadow-sm"><p class="text-2xl font-black text-blue-600">1,200+</p><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Book Pages</p></div>
+        <div class="bg-white border border-slate-200 rounded-2xl px-6 py-4 shadow-sm"><p class="text-2xl font-black text-blue-600">11,000+</p><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">MCQs</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Reviews ────────────────────────────────────────────────── -->
+  <div style="background:#f8fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0" class="py-14">
+    <section id="reviews" class="max-w-6xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-10">
+        <p class="text-xs font-black uppercase tracking-widest text-blue-600 mb-2">What Doctors Say</p>
+        <h2 class="text-2xl md:text-3xl font-black text-slate-900 mb-3">Trusted by 1,000+ Residents</h2>
+        <p class="text-slate-500 text-sm">From Egypt, Libya, Iraq, Saudi Arabia, Jordan, UAE, and beyond.</p>
+      </div>
+      <div id="reviews-grid" class="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4"></div>
+      <p id="reviews-status" class="text-center text-xs text-slate-400 mt-6"></p>
+    </section>
+  </div>
+
+  <!-- ── FAQ ───────────────────────────────────────────────────── -->
+  <section id="faq" class="py-14">
+    <div class="max-w-6xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-10">
+        <p class="text-xs font-black uppercase tracking-widest text-blue-600 mb-2">FAQ</p>
+        <h2 class="text-2xl md:text-3xl font-black text-slate-900">Common Questions</h2>
+      </div>
+      <div id="faq-list" class="max-w-3xl mx-auto space-y-3"></div>
+    </div>
+  </section>
+
+  <!-- ── Author ─────────────────────────────────────────────────── -->
+  <div style="background:#f8fafc;border-top:1px solid #e2e8f0" class="py-14">
+    <section id="author" class="max-w-6xl mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm flex flex-col md:flex-row">
+        <div class="md:w-2/5 relative" style="min-height:220px">
+          <img src="https://pub-fb0d46cb77cb4e22b5863540fe118da4.r2.dev/DrBishoyImages/Plasticology%20Book.png"
+               alt="Dr Bishoy Nagy" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(15,23,42,.6),transparent)"></div>
+        </div>
+        <div class="p-8 md:p-12 md:w-3/5">
+          <p class="text-xs font-black text-blue-600 uppercase tracking-widest mb-2">About the Author</p>
+          <h3 class="text-2xl font-black text-slate-900 mb-1">Dr. Bishoy Nagy</h3>
+          <p class="text-blue-600 font-bold mb-5 text-sm">Plastic &amp; Reconstructive Surgery Consultant</p>
+          <p class="text-slate-600 leading-relaxed mb-6 text-sm">
+            With extensive academic and clinical experience, Dr. Bishoy built Plasticology to bridge the gap between theory and surgical practice — in a way no Arabic resource had before. Three volumes, one platform, one complete ecosystem.
+          </p>
+          <ul class="space-y-2.5 text-sm text-slate-700">
+            <li class="flex items-center gap-3">🎓 PhD in Plastic Surgery</li>
+            <li class="flex items-center gap-3">🏆 Fellow of the Egyptian Board of Plastic Surgery</li>
+            <li class="flex items-center gap-3">📚 Author of the Plasticology reference series (3 volumes)</li>
+            <li class="flex items-center gap-3">💡 Founder of the Plasticology digital education platform</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ── Community ─────────────────────────────────────────────── -->
+  <section id="community" class="py-14">
+    <div class="max-w-6xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-10">
+        <p class="text-xs font-black uppercase tracking-widest text-blue-600 mb-2">Join the Community</p>
+        <h2 class="text-2xl md:text-3xl font-black text-slate-900 mb-3">Connect with Fellow Surgeons</h2>
+        <p class="text-slate-500 text-sm">Share knowledge, ask questions, and stay updated — across Facebook, Telegram, and YouTube.</p>
+      </div>
+      <div id="community-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3"></div>
+    </div>
+  </section>
+
+  <!-- ── Final CTA ──────────────────────────────────────────────── -->
+  <div style="background:linear-gradient(to right,#0f172a,#1e293b)" class="py-14">
+    <section id="order" class="max-w-6xl mx-auto px-4 md:px-6 text-center">
+      <p class="text-xs font-black text-blue-400 uppercase tracking-widest mb-3">Ready to Start?</p>
+      <h2 class="text-3xl md:text-4xl font-black text-white mb-4">Order the Complete Series</h2>
+      <p class="text-slate-400 mb-10 max-w-lg mx-auto text-sm">
+        3 volumes — the entire plastic surgery curriculum, rebuilt for 2026.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
+        <a id="cta-order-btn" href="#" target="_blank" rel="noreferrer"
+           class="flex-1 flex items-center justify-center gap-2 font-black py-4 px-6 rounded-2xl transition text-white"
+           style="background:#22c55e;box-shadow:0 4px 16px rgba(34,197,94,.3)">
+          💬 Order Complete Set
+        </a>
+        <a href="https://plasticology.surgerymastersacademy.com" target="_blank" rel="noreferrer"
+           class="flex-1 flex items-center justify-center gap-2 font-black py-4 px-6 rounded-2xl transition text-white"
+           style="background:#2563eb;box-shadow:0 4px 16px rgba(37,99,235,.3)">
+          Open Platform ↗
+        </a>
+      </div>
+      <p class="text-slate-500 text-xs mt-6">
+        Payment via Instapay · Western Union · Wise · Binance · Vodafone Cash ·
+        <a href="https://t.me/EgyPSA" target="_blank" rel="noreferrer" class="text-blue-400 hover:underline">Contact us on Telegram</a>
+      </p>
+    </section>
+  </div>
+
+  <!-- ── PDF Viewer Modal ───────────────────────────────────────── -->
+  <div id="pdf-viewer">
+    <!-- Header -->
+    <div class="viewer-header">
+      <!-- Volume info -->
+      <div class="flex items-center gap-3 min-w-0 shrink-0">
+        <div id="viewer-color-bar" class="rounded-full shrink-0" style="width:8px;height:32px"></div>
+        <div class="hidden sm:block min-w-0">
+          <p id="viewer-title" class="font-black text-white text-sm"></p>
+          <p id="viewer-subtitle" class="text-xs truncate" style="color:rgba(255,255,255,.5)"></p>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="viewer-tabs">
+        <button class="viewer-tab" data-tab="intro">📄 Intro</button>
+        <button class="viewer-tab" data-tab="samples">👁 Samples</button>
+        <button class="viewer-tab" data-tab="index">☰ Index</button>
+      </div>
+
+      <!-- Zoom + close -->
+      <div class="viewer-zoom-btns">
+        <button class="zoom-btn" id="zoom-out" title="Zoom out">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        </button>
+        <span id="zoom-label" class="text-[11px] font-bold w-10 text-center tabular-nums" style="color:rgba(255,255,255,.6)">100%</span>
+        <button class="zoom-btn" id="zoom-in" title="Zoom in">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        </button>
+        <button class="close-btn ml-2" id="close-viewer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- PDF canvas -->
+    <div id="pdf-canvas-area">
+      <div id="pdf-loading">
+        <div class="spinner"></div>
+        <p class="text-xs font-bold uppercase tracking-widest">Loading…</p>
+      </div>
+      <div id="pdf-error" style="color:#f87171">
+        <p class="font-bold text-sm">Failed to load PDF</p>
+        <p class="text-xs mt-1" style="color:rgba(255,255,255,.3)">Check that the file exists on the R2 bucket and CORS is enabled.</p>
+      </div>
+      <canvas id="pdf-canvas" style="display:none"></canvas>
+    </div>
+
+    <!-- Footer -->
+    <div class="viewer-footer">
+      <p class="text-xs hidden sm:block" style="color:rgba(255,255,255,.4)">← → to navigate · +/- to zoom</p>
+      <div class="flex items-center gap-2">
+        <button class="page-nav-btn" id="prev-page" disabled>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+          Prev
+        </button>
+        <span id="page-counter" style="color:rgba(255,255,255,.7)">— / —</span>
+        <button class="page-nav-btn" id="next-page" disabled>
+          Next
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Back to top ────────────────────────────────────────────── -->
+  <button id="backToTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

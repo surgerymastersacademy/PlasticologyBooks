@@ -1,0 +1,301 @@
+/* styles.css — Plasticology 2nd Edition */
+:root {
+  --primary: #7c3aed;
+  --primary2: #0891b2;
+  --primary3: #db2777;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: #fff;
+  overflow-x: hidden;
+  font-family: 'Cairo', sans-serif;
+}
+
+/* ── Sticky nav ─────────────────────────────────────────────────── */
+#anchor-nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+#anchor-nav .inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  height: 48px;
+}
+#anchor-nav .nav-links {
+  display: flex;
+  gap: .25rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+#anchor-nav .nav-links::-webkit-scrollbar { display: none; }
+#anchor-nav .nav-links button {
+  white-space: nowrap;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: .75rem;
+  font-weight: 700;
+  color: #64748b;
+  transition: all .2s;
+}
+#anchor-nav .nav-links button:hover { background: #f1f5f9; color: #0f172a; }
+#anchor-nav .nav-ctas { display: flex; gap: .5rem; flex-shrink: 0; }
+.btn-order {
+  display: inline-flex; align-items: center; gap: .35rem;
+  background: #22c55e; color: #fff; font-weight: 900; font-size: .75rem;
+  padding: 7px 14px; border-radius: 10px; transition: background .2s;
+  white-space: nowrap;
+}
+.btn-order:hover { background: #16a34a; }
+.btn-platform {
+  display: inline-flex; align-items: center; gap: .35rem;
+  background: #2563eb; color: #fff; font-weight: 900; font-size: .75rem;
+  padding: 7px 14px; border-radius: 10px; transition: background .2s;
+  white-space: nowrap;
+}
+.btn-platform:hover { background: #1d4ed8; }
+
+/* ── Hero ───────────────────────────────────────────────────────── */
+#hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0f172a 100%);
+  overflow: hidden;
+  position: relative;
+}
+.hero-blob {
+  position: absolute; border-radius: 50%; filter: blur(80px);
+  pointer-events: none; opacity: .25;
+}
+
+/* Book float animations */
+@keyframes float0 {
+  0%,100% { transform: translateY(0px); }
+  50%      { transform: translateY(-12px); }
+}
+@keyframes float1 {
+  0%,100% { transform: translateY(0px); }
+  50%      { transform: translateY(-18px); }
+}
+@keyframes float2 {
+  0%,100% { transform: translateY(0px); }
+  50%      { transform: translateY(-10px); }
+}
+.book-float-0 { animation: float0 4s ease-in-out infinite; }
+.book-float-1 { animation: float1 4.5s ease-in-out infinite .3s; }
+.book-float-2 { animation: float2 5s ease-in-out infinite .6s; }
+
+/* ── Volume cards ───────────────────────────────────────────────── */
+.vol-card {
+  background: #fff;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  transition: box-shadow .3s, transform .3s;
+  display: flex; flex-direction: column;
+}
+.vol-card:hover { box-shadow: 0 12px 32px rgba(0,0,0,.1); transform: translateY(-2px); }
+.vol-card-cover img {
+  transition: transform .5s;
+}
+.vol-card-cover:hover img { transform: scale(1.05); }
+.action-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  padding: 10px; border-radius: 12px; border-width: 2px; border-style: solid;
+  font-size: .6875rem; font-weight: 900; transition: opacity .2s;
+  cursor: pointer; background: transparent;
+}
+.action-btn:hover { opacity: .75; }
+.chapter-row {
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 6px 0; border-bottom: 1px solid #f8fafc; font-size: .75rem; color: #475569;
+}
+.chapter-row:last-child { border-bottom: none; }
+
+/* ── Platform features ──────────────────────────────────────────── */
+.feat-card {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 16px; padding: 16px;
+  transition: background .2s;
+}
+.feat-card:hover { background: rgba(255,255,255,.1); }
+
+/* ── Curriculum rows ────────────────────────────────────────────── */
+.curr-row {
+  display: flex; align-items: center; gap: 16px;
+  padding: 14px 16px; border-radius: 12px; border: 1px solid #e2e8f0;
+  background: #fff; transition: border-color .2s, box-shadow .2s;
+}
+.curr-row:hover { border-color: #cbd5e1; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+.curr-row.coming { opacity: .55; background: #f8fafc; }
+
+/* ── Reviews ────────────────────────────────────────────────────── */
+.review-card {
+  background: #fff; border-radius: 16px;
+  border: 1px solid #e2e8f0; padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+  transition: box-shadow .2s;
+  break-inside: avoid;
+}
+.review-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.08); }
+
+/* ── FAQ ────────────────────────────────────────────────────────── */
+.faq-item {
+  background: #fff; border-radius: 16px;
+  border: 1px solid #e2e8f0; overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+}
+.faq-trigger {
+  width: 100%; display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 16px;
+  padding: 18px 20px; text-align: left; cursor: pointer;
+  transition: background .15s;
+}
+.faq-trigger:hover { background: #f8fafc; }
+.faq-body {
+  display: none; padding: 0 20px 18px;
+  border-top: 1px solid #f1f5f9;
+}
+.faq-body.open { display: block; }
+.faq-chevron { transition: transform .2s; flex-shrink: 0; margin-top: 2px; }
+.faq-chevron.open { transform: rotate(180deg); }
+
+/* ── Community links ────────────────────────────────────────────── */
+.comm-link {
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 16px;
+  padding: 16px; display: flex; flex-direction: column;
+  align-items: center; gap: 8px; text-align: center;
+  transition: box-shadow .2s, border-color .2s;
+}
+.comm-link:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); border-color: #cbd5e1; }
+
+/* ── PDF Viewer modal ───────────────────────────────────────────── */
+#pdf-viewer {
+  display: none;
+  position: fixed; inset: 0; z-index: 300;
+  background: rgba(0,0,0,.92);
+  backdrop-filter: blur(4px);
+  flex-direction: column;
+}
+#pdf-viewer.open { display: flex; }
+
+#pdf-viewer .viewer-header {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  gap: 12px; padding: 10px 16px;
+  background: rgba(0,0,0,.6);
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  flex-shrink: 0;
+}
+.viewer-tabs {
+  display: flex; background: rgba(255,255,255,.1);
+  padding: 4px; border-radius: 12px; gap: 4px;
+}
+.viewer-tab {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border-radius: 8px;
+  font-size: .75rem; font-weight: 700; color: rgba(255,255,255,.7);
+  transition: all .15s; cursor: pointer; border: none;
+}
+.viewer-tab.active { background: #fff; color: #0f172a; }
+.viewer-tab:not(.active):hover { color: #fff; }
+.viewer-zoom-btns {
+  display: flex; align-items: center; gap: 4px;
+}
+.zoom-btn {
+  padding: 6px; background: rgba(255,255,255,.1);
+  border-radius: 8px; color: #fff; border: none; cursor: pointer;
+  transition: background .15s; display: flex; align-items: center;
+}
+.zoom-btn:hover { background: rgba(255,255,255,.2); }
+.zoom-btn:disabled { opacity: .4; cursor: default; }
+.close-btn {
+  padding: 8px; background: rgba(255,255,255,.1);
+  border-radius: 50%; color: #fff; border: none; cursor: pointer;
+  transition: background .15s; display: flex; align-items: center;
+}
+.close-btn:hover { background: #ef4444; }
+
+#pdf-canvas-area {
+  flex: 1; overflow: auto; background: #1e293b;
+  display: flex; justify-content: center; align-items: flex-start;
+  padding: 16px 8px;
+}
+#pdf-canvas { display: block; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+
+#pdf-loading {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 12px; margin-top: 80px; color: rgba(255,255,255,.4);
+}
+#pdf-error {
+  display: none; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 8px; margin-top: 80px; text-align: center; padding: 16px;
+}
+
+.viewer-footer {
+  flex-shrink: 0; display: flex; align-items: center;
+  justify-content: space-between; gap: 12px;
+  padding: 10px 16px;
+  background: rgba(0,0,0,.6);
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+.page-nav-btn {
+  display: flex; align-items: center; gap: 4px;
+  padding: 6px 12px; background: rgba(255,255,255,.1);
+  border-radius: 8px; color: #fff; font-size: .75rem; font-weight: 700;
+  border: none; cursor: pointer; transition: background .15s;
+}
+.page-nav-btn:hover { background: rgba(255,255,255,.2); }
+.page-nav-btn:disabled { opacity: .4; cursor: default; }
+#page-counter { color: rgba(255,255,255,.7); font-size: .75rem; font-weight: 700; min-width: 64px; text-align: center; }
+
+/* Spinner */
+@keyframes spin { to { transform: rotate(360deg); } }
+.spinner {
+  width: 36px; height: 36px; border: 3px solid rgba(255,255,255,.15);
+  border-top-color: rgba(255,255,255,.6); border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* ── Serial code callout ────────────────────────────────────────── */
+.serial-callout {
+  border: 2px solid #f59e0b; border-radius: 16px;
+  background: linear-gradient(to right, #fffbeb, #fef3c7, #fffbeb);
+  overflow: hidden; position: relative;
+}
+.serial-callout::before {
+  content: 'NEW'; position: absolute; top: 0; left: 0;
+  background: #f59e0b; color: #1c1917;
+  font-size: .6rem; font-weight: 900; letter-spacing: .05em;
+  padding: 2px 8px; border-bottom-right-radius: 8px;
+}
+
+/* ── Back to top ────────────────────────────────────────────────── */
+#backToTop {
+  position: fixed; bottom: 24px; right: 24px; z-index: 50;
+  background: #7c3aed; color: #fff;
+  width: 44px; height: 44px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 14px rgba(124,58,237,.4);
+  opacity: 0; transform: translateY(20px);
+  transition: opacity .3s, transform .3s;
+  border: none; cursor: pointer;
+}
+#backToTop.visible { opacity: 1; transform: translateY(0); }
+
+/* ── Utility ────────────────────────────────────────────────────── */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }

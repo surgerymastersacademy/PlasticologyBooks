@@ -296,6 +296,72 @@ body {
 }
 #backToTop.visible { opacity: 1; transform: translateY(0); }
 
+/* ── Progress bar ───────────────────────────────────────────────── */
+#progress-bar {
+  position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+  z-index: 9999; pointer-events: none;
+  background: linear-gradient(to right, #7c3aed, #db2777, #f59e0b);
+  transition: width .1s linear;
+}
+
+/* ── Scroll reveal ──────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Video section ──────────────────────────────────────────────── */
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  background: #0f172a;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
+/* ── Floating WhatsApp button ───────────────────────────────────── */
+#float-whatsapp {
+  position: fixed; bottom: 80px; right: 24px; z-index: 50;
+  display: flex; align-items: center; gap: 8px;
+  background: #22c55e; color: #fff;
+  padding: 12px 18px; border-radius: 50px;
+  font-weight: 900; font-size: .8125rem;
+  box-shadow: 0 6px 20px rgba(34,197,94,.4);
+  transition: transform .2s, box-shadow .2s, opacity .3s;
+  opacity: 0; transform: translateY(12px);
+  pointer-events: none;
+}
+#float-whatsapp.visible {
+  opacity: 1; transform: translateY(0); pointer-events: auto;
+}
+#float-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(34,197,94,.5);
+}
+#float-whatsapp svg {
+  width: 18px; height: 18px; flex-shrink: 0;
+}
+
+/* ── Mobile hero — single cover on small screens ────────────────── */
+@media (max-width: 480px) {
+  #hero-covers { width: 220px !important; height: 260px !important; }
+  #hero-covers > div:nth-child(1),
+  #hero-covers > div:nth-child(3) { display: none; }
+  #hero-covers > div:nth-child(2) {
+    transform: translateX(-50%) rotate(0deg) !important;
+  }
+  #hero-covers > div:nth-child(2) img { height: 240px !important; }
+}
+
 /* ── Utility ────────────────────────────────────────────────────── */
 .no-scrollbar { scrollbar-width: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; }

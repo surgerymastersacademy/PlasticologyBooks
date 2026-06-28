@@ -397,9 +397,36 @@ document.addEventListener('keydown', e => {
   if (e.key === '-')           document.getElementById('zoom-out').click();
 });
 
-// ── Back to top ──────────────────────────────────────────────────────────────
-const backBtn = document.getElementById('backToTop');
+// ── Progress bar ─────────────────────────────────────────────────────────────
+const progressBar   = document.getElementById('progress-bar');
+const floatWA       = document.getElementById('float-whatsapp');
+const backBtn       = document.getElementById('backToTop');
+
+floatWA.href = orderUrl;
+
 window.addEventListener('scroll', () => {
-  backBtn.classList.toggle('visible', window.scrollY > 300);
-});
+  // progress bar
+  const scrolled = window.scrollY;
+  const total    = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (total > 0 ? (scrolled / total) * 100 : 0) + '%';
+
+  // back to top
+  backBtn.classList.toggle('visible', scrolled > 300);
+
+  // floating WhatsApp — show after scrolling past hero
+  floatWA.classList.toggle('visible', scrolled > 500);
+}, { passive: true });
+
 backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// ── Scroll reveal (IntersectionObserver) ─────────────────────────────────────
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
